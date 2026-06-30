@@ -1,0 +1,13 @@
+<div class="news-teaser">
+  <div class="heading">
+    <h2>Latest news</h2>
+    <a href="{{ '/news/' | relative_url }}">All news →</a>
+  </div>
+  {% assign recent_news = site.news | sort: 'date' | reverse | slice: 0, 3 %}
+  {% for entry in recent_news %}
+    <div class="teaser-item">
+      <div class="date">{{ entry.date | date: "%b %Y" }}</div>
+      <div>{{ entry.title }}</div>
+    </div>
+  {% endfor %}
+</div>

@@ -1,0 +1,25 @@
+{% assign t = include.topic %}
+{% assign is_reverse = include.index | modulo: 2 %}
+
+<div class="topic{% if is_reverse == 1 %} reverse{% endif %}">
+  <div class="topic-image">
+    {% if t.image %}
+      <img src="{{ t.image | relative_url }}" alt="{{ t.title }}">
+    {% else %}
+      <img src="{{ '/assets/images/research/placeholder.jpg' | relative_url }}" alt="">
+    {% endif %}
+  </div>
+  <div class="topic-text">
+    <h2>{{ t.title }}</h2>
+    <p>{{ t.text }}</p>
+
+    {% if t.publications and t.publications.size > 0 %}
+    <div class="publications">
+      <div class="label">Publications</div>
+      {% for pub in t.publications %}
+        <p>{{ pub | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</div>

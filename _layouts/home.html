@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>
+<body>
+
+  {% include nav.html %}
+
+  <!-- ── Hero image ──────────────────────────────────────────────
+       Set page.hero_image in this page's front matter to a photo
+       under /assets/images/. Recommended: a wide landscape shot,
+       at least 1600px wide, fairly dark or with contrast at the
+       bottom-left where the headline text sits. -->
+  <div class="hero" style="background-image: url('{{ page.hero_image | relative_url }}');">
+    <div class="scrim"></div>
+    <div class="hero-text">
+      <h1>{{ page.headline }}</h1>
+      <p>{{ page.tagline }}</p>
+    </div>
+  </div>
+
+  <!-- ── Mission statement ───────────────────────────────────────
+       Edit the body text of index.md itself (below the front
+       matter) -- it renders here. Keep it to one short paragraph;
+       this is the only prose on the homepage. -->
+  <div class="mission">
+    {{ content }}
+  </div>
+
+  <!-- ── Current directions ──────────────────────────────────────
+       Edit the `directions` list in this page's front matter.
+       These fade in on scroll. Keep each one to a few words --
+       this is a pointer to the Research page, not a summary. -->
+  <div class="directions" id="directions">
+    {% for d in page.directions %}
+      <div class="item">
+        <div class="rule"></div>
+        <p>{{ d }}</p>
+      </div>
+    {% endfor %}
+  </div>
+
+  {% include news-teaser.html %}
+
+  {% include footer.html %}
+
+  <script>
+    const items = document.querySelectorAll('.directions .item');
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced) {
+      items.forEach(el => el.classList.add('visible'));
+    } else {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) e.target.classList.add('visible');
+        });
+      }, { threshold: 0.3 });
+      items.forEach(el => observer.observe(el));
+    }
+  </script>
+
+</body>
+</html>

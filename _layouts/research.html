@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} — {{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>
+<body>
+
+  {% include nav.html %}
+
+  <main class="page-content">
+    <h1>{{ page.title }}</h1>
+
+    <!-- Optional short intro -- edit / delete in research.md's body content -->
+    {{ content }}
+
+    <!-- Each topic loops through page.topics in order. Adding a
+         `section:` field to a topic (see research.md) prints a
+         heading above it whenever the section changes from the
+         previous topic -- so topics in the same section group
+         together under one heading, and image alternation restarts
+         at the top of each new section. -->
+    {% assign last_section = "" %}
+    {% assign section_index = 0 %}
+    {% for topic in page.topics %}
+      {% if topic.section and topic.section != last_section %}
+        <h2 class="section-heading">{{ topic.section }}</h2>
+        {% assign last_section = topic.section %}
+        {% assign section_index = 0 %}
+      {% endif %}
+      {% include topic-block.html topic=topic index=section_index %}
+      {% assign section_index = section_index | plus: 1 %}
+    {% endfor %}
+  </main>
+
+  {% include footer.html %}
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+# ── Site settings ────────────────────────────────────────────────
+# Fill these in with your own details.
+title: "Hydrology and Landscape Dynamics Lab"
+description: "Research on groundwater, landscape evolution, and the critical zone — David Litwin's lab at Temple University."
+
+# Your eventual GitHub Pages URL, e.g. https://davidlitwin.github.io
+url: "https://davidlitwin.github.io"
+baseurl: ""
+
+email: "david.litwin@temple.edu"
+twitter_username: ""   # optional, leave blank to hide
+github_username: "DavidLitwin"
+
+# ── Build settings ───────────────────────────────────────────────
+markdown: kramdown
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-feed
+
+# The "news" collection powers the News page + homepage teaser.
+# output: false means individual news entries don't get their own
+# permalink pages -- they only render as list items on /news/.
+# Flip to true later if you ever want each entry to have its own URL.
+collections:
+  news:
+    output: false
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "news"
+    values:
+      layout: "none"
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - _news/README.md
