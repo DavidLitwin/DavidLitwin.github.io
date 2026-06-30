@@ -3,6 +3,8 @@
 title: "Hydrology and Landscape Dynamics Lab"
 description: "Research on groundwater, landscape evolution, and the critical zone — David Litwin's lab at Temple University."
 
+permalink: pretty
+
 # Your eventual GitHub Pages URL, e.g. https://davidlitwin.github.io
 url: "https://davidlitwin.github.io"
 baseurl: ""
