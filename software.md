@@ -26,7 +26,7 @@ Landlab component for shallow groundwater flow.
 [Landlab GroundwaterDupuitPercolator](https://landlab.readthedocs.io/en/latest/generated/api/landlab.components.groundwater.dupuit_percolator.html)
   
   
-### GroundwaterDupuitPercolator
+### HeightAboveNearestDrainageCalculator
 
 Landlab component for shallow groundwater flow.
  
