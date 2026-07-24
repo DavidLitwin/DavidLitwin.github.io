@@ -28,7 +28,7 @@ title: People
     <p class="bio">
       I am a PhD candidate in the department of Geological Sciences at the University of Colorado, Boulder. I am supervised by Gregory Tucker, and my research involves building and interpreting neural networks that can find subtle and complex signals in topography that can tell us about the processes and properties that shape landscapes.
 
-      I obtained my MS at the University of Vermont where I worked with Puck Rombach to solve a problem in extremal graph theory. I have also worked as a cybersecurity engineer, GIS technician, and wrangled hippies in a commercial kitchen.
+      I obtained my MS at the University of Vermont where I worked with Puck Rombach to solve a problem in extremal graph theory. I have also worked as a cybersecurity engineer, GIS technician, and wrangled hippies in a commercial kitchen. 
     </p>
   </div>
 
@@ -38,7 +38,7 @@ title: People
     <h3>Rowan Rexrode</h3>
     <p class="role">Undergraduate Researcher</p>
     <p class="bio">
-      I study environmental science with a concentration in climate and am the assistant preserve manager at the Thomas P. Bentley and Templin woods preserves. With Dr. Litwin’s assistance, I am investigating how changing storm dynamics are influencing groundwater recharge in the Northeast.
+      I study environmental science with a concentration in climate and am the assistant preserve manager at the Thomas P. Bentley and Templin woods preserves. With Dr. Litwin’s assistance, I am investigating how changing storm dynamics are influencing groundwater recharge in the Northeast. 
     </p>
   </div>
 
