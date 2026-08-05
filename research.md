@@ -51,7 +51,7 @@ topics:
       numerical models to study these dynamics in places like the
       karstified plateau between the Rhine and Danube watersheds.
     publications:
-      - "Litwin, D. G., & Malatesta, L. C. (In Review). Slower erosion in carbonate landscapes due to partitioning of energy between surface and groundwater flow. Geology."
+      - "Litwin, D. G., & Malatesta, L. C. (2026). Slower erosion in carbonate landscapes due to partitioning of energy between surface and groundwater flow. Geology. [https://doi.org/10.1130/G54788.1](https://doi.org/10.1130/G54788.1)"
   
   - title: "Groundwater, slope creep, and failure"
     image: /assets/images/research/placeholder.jpg
